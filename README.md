@@ -7,3 +7,10 @@
 # markdown 작성 참고 사이트
 
 - https://velog.io/@yuuuye/velog-마크다운MarkDown-작성법
+
+<br><br>
+
+# commit 유의사항
+
+- 1일 1커밋 진행하기
+- 커밋 진행시 커밋명은 '날짜 작업내용'으로 진행한다. (예시 : 230601 README 작성)
