@@ -4,8 +4,15 @@ import java.util.Scanner;
 
 public class P2562 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
+        P2562 main = new P2562();
+
+        main.run();
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int[] data = new int[9];
         int max = 0, index = 0;
 
