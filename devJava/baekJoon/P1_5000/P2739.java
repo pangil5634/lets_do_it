@@ -4,7 +4,14 @@ import java.util.Scanner;
 
 public class P2739 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        P2739 main = new P2739();
+        main.run();
+
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int dan = sc.nextInt();
 
         for (int i = 0; i < 9; i++) {
