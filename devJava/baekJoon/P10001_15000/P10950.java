@@ -4,8 +4,15 @@ import java.util.Scanner;
 
 public class P10950 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        P10950 main = new P10950();
 
+        main.run();
+
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int count = sc.nextInt();
 
         for (int i = 0; i < count; i++) {

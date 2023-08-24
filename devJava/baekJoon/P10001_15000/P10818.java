@@ -3,13 +3,17 @@ package devJava.baekJoon.P10001_15000;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class P10818 {
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        P10818 main = new P10818();
+        main.run();
+    }
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    void run() {
         int count = 0;
         try {
             count = Integer.parseInt(br.readLine());

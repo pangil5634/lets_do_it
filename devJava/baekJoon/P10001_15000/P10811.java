@@ -6,8 +6,13 @@ public class P10811 {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        P10811 main = new P10811();
+        main.run();
+    }
 
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int basket = sc.nextInt();
 
         int[] baskets = new int[basket];

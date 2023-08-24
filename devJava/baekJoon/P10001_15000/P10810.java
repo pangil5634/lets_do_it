@@ -4,7 +4,14 @@ import java.util.Scanner;
 
 public class P10810 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        P10810 main = new P10810();
+        main.run();
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
 
         int basket = sc.nextInt();
 
@@ -30,6 +37,5 @@ public class P10810 {
             System.out.print(baskets[i] + " ");
         }
         System.out.println();
-
     }
 }

@@ -5,8 +5,14 @@ import java.util.Scanner;
 public class P10813 {
 
     public static void main(String[] args) {
+        P10813 main = new P10813();
+        main.run();
 
-        Scanner sc = new Scanner(System.in);
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
 
         int basket = sc.nextInt();
 

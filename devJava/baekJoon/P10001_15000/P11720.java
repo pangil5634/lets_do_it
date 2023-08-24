@@ -4,9 +4,17 @@ import java.util.Scanner;
 
 public class P11720 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        P11720 main = new P11720();
 
+        main.run();
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int count = sc.nextInt();
+        count = count + 0;
+
         String temp = sc.next();
 
         String[] temps = temp.split("");
@@ -17,6 +25,5 @@ public class P11720 {
         }
 
         System.out.println(result);
-
     }
 }

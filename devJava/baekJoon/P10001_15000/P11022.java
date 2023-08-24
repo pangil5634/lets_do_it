@@ -5,7 +5,14 @@ import java.util.Scanner;
 public class P11022 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        P11022 main = new P11022();
+
+        main.run();
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int count = sc.nextInt();
 
         for (int i = 0; i < count; i++) {

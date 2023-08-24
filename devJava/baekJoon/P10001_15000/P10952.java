@@ -4,8 +4,13 @@ import java.util.Scanner;
 
 public class P10952 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        P10952 main = new P10952();
+        main.run();
+    }
 
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         while (true) {
 
             int n1 = sc.nextInt();
