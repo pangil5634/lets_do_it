@@ -5,7 +5,13 @@ import java.util.Scanner;
 public class P10807 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        P10807 main = new P10807();
+        main.run();
+    }
+
+    Scanner sc = new Scanner(System.in);
+
+    void run() {
         int count = sc.nextInt();
         int[] numbers = new int[count];
 
@@ -21,5 +27,6 @@ public class P10807 {
             }
         }
         System.out.println(same);
+
     }
 }
