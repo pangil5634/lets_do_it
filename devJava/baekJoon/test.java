@@ -6,9 +6,9 @@ public class test {
     public static void main(String[] args) {
         String input = "";
 
-        Scanner sc = new Scanner(System.in);
-
-        input = sc.nextLine();
+        try (Scanner sc = new Scanner(System.in)) {
+            input = sc.nextLine();
+        }
 
         String[] temps = input.split("");
 
@@ -35,5 +35,5 @@ public class test {
         }
         System.out.println(total);
     }
-    
+
 }
