@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.java": "java",
+        "__bit_reference": "c",
+        "bitset": "c",
+        "unordered_map": "c",
+        "chrono": "c",
+        "algorithm": "c",
+        "format": "c",
+        "sstream": "c"
+    }
+}
