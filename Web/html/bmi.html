@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - BMI</title>
+    </head>
+    <style>
+
+        #section {
+            width: 40%;
+            height: 400px;
+            background-color: rebeccapurple;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        div {
+            margin: 10px;
+        }
+
+        #div1,
+        #div2 {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #div3 {
+            width: 50%;
+            text-align: right;
+        }
+
+        #result1,
+        #result2 {
+            width: 50%;
+            background-color: white;
+        }
+    </style>
+    <body>
+        <div id="section">
+            <h1>BMI 계산기</h1>
+            <div id="div1">
+                <label>키
+                </label>
+                <input type="text" id="height" placeholder="150cm">
+            </div>
+            <div id="div2">
+                <label>몸무게
+                </label>
+                <input type="text" id="kg" placeholder="60kg">
+            </div>
+            <div id="div3">
+                <input type="button" value="계산" id="button1" onclick="cal()">
+            </div>
+
+            <div id="div1">
+                <label>결과</label>
+                <label id="result1"></label>
+
+            </div>
+            <div id="div1">
+                <label>상태</label>
+                <label id="result2"></label>
+            </div>
+            <div id="div1">
+                <p>
+                    18.0 미만 : 저체중
+                    <br>ㅌ₩
+                    25.0 미만 : 정상
+                    <br>
+                    35.0 미만 : 과체중
+                    <br>
+                </p>
+            </div>
+        </div>
+        <script>
+
+            function cal() {
+                var height = parseInt(document.getElementById("height").value);
+                var kg = parseInt(document.getElementById("kg").value);
+                var result = document.getElementById("result");
+                var result2 = document.getElementById("result2");
+
+                alert("계산되었습니다!");
+
+                const bmi = (kg / ((height * height) / 10000)).toFixed(2);
+
+                result1.innerHTML = bmi;
+
+                if (bmi < 18.0) {
+                    result2.innerHTML = "저체중입니다.";
+                } else if (bmi < 25.0) {
+                    result2.innerHTML = "정상입니다.";
+                } else if (bmi < 30.0) {
+                    result2.innerHTML = "과체중입니다.";
+
+                }
+
+            }
+        </script>
+    </body>
+</html>
