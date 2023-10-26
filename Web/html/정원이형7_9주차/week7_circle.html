@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>원의 둘레 길이</h1>
+    <p>원의 반지름 10인 원의 둘레는 <span id = "circle"></span>입니다.</p>
+
+    <script>
+        var text = document.getElementById("circle"); // body 영역에서 'circle'이라는 id로 된 태그를 찾는다.
+        var circle = 2 * Math.PI * 10; // 원의 둘레를 저장하고 있는 변수를 생성한다.
+
+        text.innerHTML = circle.toFixed(6); // 'circle'이라는 id로 된 태그의 HTML 내용을 circle(둘레)로 삽입한다.
+    </script>
+</body>
+</html>

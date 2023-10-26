@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>다섯 과목의 점수의 총점과 평균</h1>
+        <p>총점 :
+            <span id="total"></span>
+            평균 :
+            <span id="avg"></span></p>
+        <!-- <p>평균 : <span id="avg"></span></p> -->
+
+        <script>
+
+            var num = new Array();
+            var total = 0;
+            for (var i = 0; i < 5; i++) {
+                num.push(Number(prompt("과목" + (i + 1) + "의 성적을 입력해 주세요.")));
+                total += num[i];
+            }
+
+            var avg = total / 5.0;
+            alert("과목1=" + num[0] + " 과목2=" + num[1] + " 과목3=" + num[2] + " 과목4=" + num[3]+ " 과목5=" + num[4]);
+
+            var text_total = document.getElementById("total");
+            text_total.innerHTML = total;
+            var text_avg = document.getElementById("avg");
+            text_avg.innerHTML = avg;
+        </script>
+    </body>
+</html>
