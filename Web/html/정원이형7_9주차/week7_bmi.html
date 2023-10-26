@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bmi{
+            color : red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>체질량 지수 BMI 구하기</h1>
+    <p>체질량지수 : <span id = "bmi"></span> 입니다.</p>
+
+    <script>
+        var text = document.getElementById("bmi");
+        var bmi = 70 / (1.85 * 1.85);
+
+        text.innerHTML = bmi.toFixed(6);
+    </script>
+</body>
+</html>
