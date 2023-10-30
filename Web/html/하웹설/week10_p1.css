@@ -1,0 +1,13 @@
+div{
+    width : 500px;
+    display: flex;
+    justify-content :space-between;
+}
+
+div > label{
+    width : 100px;
+}
+
+div > input {
+    width: 200px;
+}

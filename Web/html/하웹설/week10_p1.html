@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10주차 1번 실습</title>
+        <link rel="stylesheet" href="week10_p1.css">
+    </head>
+
+    <body>
+        <div>
+            <label>체중 (kg 단위)</label>
+            <input type="text" id="weight">
+        </div>
+        <div>
+            <label>키 (m 단위)</label>
+            <input type="text" id="height">
+        </div>
+        <div id="result_div">
+            <label>BMI :
+                <label id="result">Ex 10</label>
+            </label>
+            <input type="button" value="계산하기" onclick="cal()">
+        </div>
+        <script>
+
+            function cal() {
+                var weight = document
+                    .getElementById("weight")
+                    .value;
+                var height = document
+                    .getElementById("height")
+                    .value;
+
+                var bmi = weight / (height * height);
+
+                var result = document.getElementById("result");
+                result.innerHTML = bmi;
+
+            }
+        </script>
+    </body>
+
+</html>
