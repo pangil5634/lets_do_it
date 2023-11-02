@@ -57,10 +57,29 @@ function myForEach() {
 
 function myMap() {
     if (confirm("입력하신 단어를 보시겠습니까?")) {
-        var result = myData.map(function (value, index) {
-            return ("내용 : " + value);
+        var count = 0;
+        myData = myData.map(function (value, index) {
+            count++;
+            return ("[" + count + "] " + value);
         });
-
-        alert(result);
+        alert(myData);
     }
 }
+
+function myFilter() {
+    var str = prompt("필터하고 싶은 내용을 입력해주세요.");
+    var temp = myData.filter(function (value, index) {
+        if (value.includes(str)) {
+            return value;
+        }
+    });
+    alert(temp);
+}
+
+var button = document.getElementById('button');
+var element = document.getElementById('count');
+var count = 0;
+button.addEventListener('click', function () {
+    count++
+    element.innerHTML = count;
+});
