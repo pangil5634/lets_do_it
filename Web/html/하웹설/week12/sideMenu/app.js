@@ -9,10 +9,11 @@ menu.click(function (event) {
 
     // ajax 실행
     $
-        .ajax(url)
-        .done(function (html) {
+        .ajax(url) // 클릭한 메뉴의 url을 불러온다.
+        .done(function (html) { // done : 바로 실행, 
+            alert(html);
             //  성공 시 실행할 코드
-            content.html(html);
+            content.html(html); // 이벤트가 발생된 url의 html 코드를 content의 html 코드로 넣는다.
         });
 
     
