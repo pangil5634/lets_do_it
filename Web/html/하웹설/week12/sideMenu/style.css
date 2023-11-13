@@ -1,7 +1,28 @@
-#sidemenu, #content{
-    /* float : left; */
+body{
+    width : 50%;
+    margin : 0 auto;
+}
+nav{
+}
+#sidemenu ul{
+    padding-left : 0;
+    display: flex;
+    justify-content: end;
+}
+#sidemenu ul li{
+
+    list-style: none;
+    box-sizing: border-box;
+    margin : 0px 5px;
+    padding : 10px;
+    background-color: black;
+    color : white;
+    border-radius: 10px;
 
 }
 #content {
+    background-color: wheat;
+    box-sizing: border-box;
     padding : 16px 40px;
+    border-radius: 15px;
 }
