@@ -8,5 +8,6 @@
         "algorithm": "c",
         "format": "c",
         "sstream": "c"
-    }
+    },
+    "liveServer.settings.port": 5502
 }
