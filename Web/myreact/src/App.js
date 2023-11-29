@@ -3,6 +3,7 @@
 import logo from './logo.svg';
 import './App.css'; // css파일 import
 import {useState} from 'react';
+import GoodTest from './GoodTest';
 
 function App() {
 
@@ -30,50 +31,22 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <div className="black-nav">
-                <h4>ReactBlog</h4>
-            </div>
-
-            <button className="button1" onClick={changeGender}>여자로 변경</button>
-            <button className="button1" onClick={titleSorting}>가나다순으로 정렬</button>
-            <div className="list">
-                <h4>{title[0]}
-                    <span onClick={addHeart}>
-                        &nbsp;❤️&nbsp;
-                    </span>
-                    <span>
-                        {heart}
-                    </span>
-                </h4>
-                <p>{date[0]}</p>
-            </div>
-
-            <div className="list">
-                <h4>{title[1]}
-                    <span onClick={addHeart}>
-                        &nbsp;❤️&nbsp;
-                    </span>
-                    <span>
-                        {heart}
-                    </span>
-                </h4>
-                <p>{date[1]}</p>
-            </div>
-            <div className="list">
-                <h4>{title[2]}
-                    <span onClick={addHeart}>
-                        &nbsp;❤️&nbsp;
-                    </span>
-                    <span>
-                        {heart}
-                    </span>
-                </h4>
-                <p>{date[2]}</p>
-            </div>
-            <h4>{post}</h4>
+        <div>
+            <GoodTest></GoodTest>
         </div>
     );
+    // <div className="App">     <div className="black-nav"> <h4>ReactBlog</h4>
+    // </div>     <button className="button1" onClick={changeGender}>여자로 변경</button>
+    // <button className="button1" onClick={titleSorting}>가나다순으로 정렬</button> <div
+    // className="list"> <h4>{title[0]}             <span onClick={addHeart}>
+    // &nbsp;❤️&nbsp;             </span>             <span>                 {heart}
+    // </span>         </h4>         <p>{date[0]}</p>     </div>     <div
+    // className="list">         <h4>{title[1]}             <span
+    // onClick={addHeart}>                 &nbsp;❤️&nbsp;             </span> <span>
+    // {heart}             </span>         </h4> <p>{date[1]}</p>     </div> <div
+    // className="list">         <h4>{title[2]} <span onClick={addHeart}>
+    // &nbsp;❤️&nbsp;             </span> <span>                 {heart} </span>
+    // </h4> <p>{date[2]}</p>     </div>     <h4>{post}</h4> </div>
 }
 
 export default App;
