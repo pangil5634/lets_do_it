@@ -1,6 +1,10 @@
+import { Page } from "../components/Page";
+
 function MyPage() {
     return (
-        <div>마이페이지입니다.</div>
+      <Page>
+        <h1>마이페이지입니다.</h1>
+      </Page>
     );
 }
 
