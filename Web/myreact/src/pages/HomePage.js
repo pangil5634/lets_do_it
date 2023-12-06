@@ -1,7 +1,10 @@
+import { Page } from "../components/Page"
 function Home() {
     
     return (
-      <div>home페이지</div>  
+      <Page>
+        <h1>홈페이지입니다.</h1>
+      </Page>
     );
 }
 
