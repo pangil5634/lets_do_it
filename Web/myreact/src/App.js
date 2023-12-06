@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
-// import Layout from './pages/Layout';
+import Layout from './pages/Layout';
 import HomePage from './pages/HomePage';
 // import UserProvider from "./contexts/userContext";
 function App() {
@@ -9,9 +9,9 @@ function App() {
     return (
         // <UserProvider>
             <Routes>
-                {/* <Route path="/" element={<Layout />}> */}
+                <Route path="/" element={<Layout />}>
                     <Route index="index" element={<HomePage/>}/>
-                {/* </Route> */}
+                </Route>
             </Routes>
         // </UserProvider>
     );
