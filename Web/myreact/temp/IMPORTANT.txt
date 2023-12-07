@@ -1,0 +1,5 @@
+local에서 파일 수정 후 배포 방법
+
+1. npm run build 명령어를 통해 build를 진행한다.
+2. firebase deploy 명령어를 통해 deploy를 진행한다.
+3. 웹사이트에서 변경된 사항을 확인한다.
