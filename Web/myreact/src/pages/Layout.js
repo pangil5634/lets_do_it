@@ -15,10 +15,16 @@ function Layout() {
                     <label>Home</label>
                 </Link>
 
+                {/* Post */}
+                <Link to="/Post">
+                    <label>Post</label>
+                </Link>
+
                 {/* MyPage */}
                 <Link to="/MyPage">
                     <label>MyPage</label>
                 </Link>
+
             </MenuBar>
 
             <main>

@@ -2,21 +2,15 @@ import React from 'react';
 import { Page } from '../components/Page';
 import { useFirebase } from '../App'; // App 컴포넌트에서 만든 useFirebase 커스텀 훅을 가져옴
 
+
 function Home() {
   // useFirebase 훅을 사용하여 Firebase 데이터에 접근
-  const { posts } = useFirebase();
 
   return (
     <Page>
-      <h1>홈페이지입니다.</h1>
-      
-      {/* posts 배열을 사용하여 데이터를 렌더링 */}
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
-        </div>
-      ))}
+      <h1>김광일의 사이트에 오신 것을 환영합니다.</h1>
+      <p>상단에 있는 MenuBar를 통해서 다양한 페이지에 접근 가능합니다.</p>
+
     </Page>
   );
 }
