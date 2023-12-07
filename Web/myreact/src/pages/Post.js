@@ -17,7 +17,7 @@ function Home() {
         <div key={post.id}>
          {/* Link 컴포넌트를 사용하여 페이지 이동 */}
           <Link to={`/post/${post.id}`}>
-            <H2>{post.title}</H2>
+            <H2 hoverColor = "skyblue">{post.title}</H2>
           </Link>
           {/* <p>{post.content}</p> */}
         </div>
