@@ -8,3 +8,19 @@ export const Page = styled.div `
     background-color: #FFF7D4;
     color : #527853;
 `;
+
+
+export const MyButton = styled.button`
+    border : none;
+    width : ${props => props.width || ""};
+    height : 30px;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: black;
+        color : white;
+    }
+    margin-left : ${props => props.marginLeft || ""};
+
+    
+`;
