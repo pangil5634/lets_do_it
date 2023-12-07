@@ -6,7 +6,7 @@ import {H2} from "../components/Heading";
 import { deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase';
 
-function Home() {
+function Post() {
     // useFirebase 훅을 사용하여 Firebase 데이터에 접근
     const {posts, setPosts} = useFirebase();
     const deletePost = async (postId) => {
@@ -46,4 +46,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Post;
