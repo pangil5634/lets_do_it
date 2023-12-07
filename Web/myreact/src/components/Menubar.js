@@ -5,7 +5,7 @@ export const MenuBar = styled.div`
     height : 8vh;
     background-color: #9BB8CD;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 
     a{
@@ -17,4 +17,22 @@ export const MenuBar = styled.div`
         color : #FFF7D4;
     }
 
+`;
+
+
+export const UserName = styled.label`
+    font-weight: bold;
+`;
+
+export const LogInOutButton = styled.button`
+    border : none;
+    width : ${props => props.width || ""};
+    height : 30px;
+    border-radius: 5px;
+    margin : 0px 20px;
+
+    &:hover{
+        background-color: black;
+        color : white;
+    }
 `;
