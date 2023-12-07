@@ -9,8 +9,6 @@ export const MenuBar = styled.div`
     align-items: center;
 
     a{
-        color : black;
-        text-decoration: none;
         margin : 0px 20px;
         /* background-color: #fff; */
     }

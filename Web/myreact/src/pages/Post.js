@@ -2,6 +2,7 @@ import React from 'react';
 import { Page } from '../components/Page';
 import { useFirebase } from '../App'; // App 컴포넌트에서 만든 useFirebase 커스텀 훅을 가져옴
 import { Link } from 'react-router-dom';
+import { H2 } from "../components/Heading";
 
 function Home() {
   // useFirebase 훅을 사용하여 Firebase 데이터에 접근
@@ -16,9 +17,9 @@ function Home() {
         <div key={post.id}>
          {/* Link 컴포넌트를 사용하여 페이지 이동 */}
           <Link to={`/post/${post.id}`}>
-            <h2>{post.title}</h2>
+            <H2>{post.title}</H2>
           </Link>
-          <p>{post.content}</p>
+          {/* <p>{post.content}</p> */}
         </div>
       ))}
     </Page>
