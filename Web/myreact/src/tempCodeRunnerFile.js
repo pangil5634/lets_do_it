@@ -44,8 +44,7 @@ function App() {
 
     // Firebase 컨텍스트 값을 설정
     const firebaseContextValue = {
-        posts,
-        setPosts
+        posts
     };
 
     return (
