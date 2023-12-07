@@ -3,6 +3,8 @@ import {Route, Routes} from 'react-router-dom';
 import Layout from './pages/Layout';
 import HomePage from './pages/HomePage';
 import MyPage from './pages/MyPage';
+import Post from './pages/Post';
+import PostDetails from './pages/PostDetails';
 
 import {collection, getDocs} from 'firebase/firestore';
 import {db} from './firebase';
@@ -51,7 +53,9 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     {/* HomePage에 Firebase 컨텍스트 전달 */}
                     <Route index="index" element={<HomePage />}/>
-                    <Route path="/MyPage" element={<MyPage />}/>
+                    <Route path="/MyPage" element={<MyPage />} />
+                    <Route path="/post" element={<Post/>}/>
+                    <Route path="/post/:postId" element={<PostDetails />} /> {/* 상세 페이지 라우트 추가 */}
                 </Route>
             </Routes>
         </FirebaseContext.Provider>
