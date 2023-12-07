@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuBar = styled.div`
+export const MenuBar = styled.div `
     width : 100%;
     height : 8vh;
     background-color: #9BB8CD;
@@ -9,6 +9,10 @@ export const MenuBar = styled.div`
     align-items: center;
 
     a{
+        @media (max-width: 768px) {
+            margin : 0px;
+            margin-left: 10px;
+        }
         margin : 0px 20px;
         /* background-color: #fff; */
     }
@@ -19,12 +23,11 @@ export const MenuBar = styled.div`
 
 `;
 
-
-export const UserName = styled.label`
+export const UserName = styled.label `
     font-weight: bold;
 `;
 
-export const LogInOutButton = styled.button`
+export const LogInOutButton = styled.button `
     border : none;
     width : ${props => props.width || ""};
     height : 30px;
@@ -35,4 +38,10 @@ export const LogInOutButton = styled.button`
         background-color: black;
         color : white;
     }
+`;
+
+export const Div = styled.div`
+display: flex;
+justify-content: start;
+align-items: center;
 `;

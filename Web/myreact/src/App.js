@@ -10,13 +10,16 @@ import {collection, getDocs} from 'firebase/firestore';
 import {db} from './firebase';
 import AddPage from './pages/AddPage';
 
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
+
 // Firebase 컨텍스트 생성
 const FirebaseContext = createContext();
 
 function App() {
     // 상태를 사용하여 데이터를 저장
     const [posts, setPosts] = useState([]);
-    
+    const [user, setUser] = useState(null);
 
     // useEffect를 사용하여 컴포넌트가 마운트되었을 때 데이터를 가져옴
     useEffect(() => {
@@ -43,10 +46,29 @@ function App() {
         fetchData();
     }, []); // 빈 배열을 넣어 한 번만 실행되도록 함
 
+    const auth = getAuth();
+
+    // useEffect를 사용하여 로그인 상태를 감지
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // 로그인이 성공한 경우
+                setUser(user);
+            } else {
+                // 로그아웃 또는 로그인 실패한 경우
+                setUser(null);
+            }
+        });
+
+        // cleanup 함수에서 구독 해제
+        return() => unsubscribe();
+    }, [auth]);
+
     // Firebase 컨텍스트 값을 설정
     const firebaseContextValue = {
         posts,
-        setPosts
+        setPosts,
+        user
     };
 
     return (
