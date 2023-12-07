@@ -47,13 +47,12 @@ function AddPage() {
                     })}/>
                 <br/>
                 <label>content :</label>
-                <input
-                    type="text"
+                <textarea
                     name="content"
                     onChange={(e) => setPostData({
                         ...postData,
                         content: e.target.value
-                    })}/>
+                    })}></textarea>
                 <br/>
                 <button onClick={addPost}>등록</button>
 
