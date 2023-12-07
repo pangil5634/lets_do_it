@@ -16,6 +16,7 @@ const FirebaseContext = createContext();
 function App() {
     // 상태를 사용하여 데이터를 저장
     const [posts, setPosts] = useState([]);
+    
 
     // useEffect를 사용하여 컴포넌트가 마운트되었을 때 데이터를 가져옴
     useEffect(() => {
