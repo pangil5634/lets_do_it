@@ -40,8 +40,8 @@ export const LogInOutButton = styled.button `
     }
 `;
 
-export const Div = styled.div`
-display: flex;
-justify-content: start;
-align-items: center;
+export const Div = styled.div `
+    display: flex;
+    justify-content: start;
+    align-items: center;
 `;
