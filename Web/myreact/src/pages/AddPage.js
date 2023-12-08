@@ -1,19 +1,23 @@
-import {Page} from "../components/Page";
+// react import
 import {useState} from "react";
+import {useNavigate} from "react-router-dom"; // useNavigate 추가
+// 컴포넌트 import
+import {Page, Label, Input, Textarea, MyButton} from "../components/Page";
+// firebase improt
 import {db} from "../firebase";
 import {collection, addDoc} from "firebase/firestore";
 import {useFirebase} from "../App";
-import {Link, useNavigate} from "react-router-dom"; // useNavigate 추가
 
 function AddPage() {
-    const {posts, setPosts} = useFirebase();
-    const [postData, setPostData] = useState({title: "", content: ""});
+    const {posts, setPosts} = useFirebase(); // post 변수 선언
+    const [postData, setPostData] = useState({title: "", content: ""}); // 새로 추가할 newPost 변수 선언
     const navigate = useNavigate(); // useNavigate 훅 사용
 
+    // newPost를 add하는 핸들러
     const addPost = async () => {
-        if (postData.title && postData.content) {
+        if (postData.title && postData.content) { // title과 content가 둘 다 있을 경우에만 등록 가능
             try {
-                const docRef = await addDoc(collection(db, "posts"), postData);
+                const docRef = await addDoc(collection(db, "posts"), postData); // posts 컬렉션에 postData를 add한다.
                 alert("데이터가 성공적으로 추가되었습니다");
 
                 setPosts([
@@ -35,26 +39,42 @@ function AddPage() {
 
     return (
         <Page>
-            등록 페이지입니다.
+            <h1>등록 페이지입니다.</h1>
             <div>
-                <label>title:</label>
-                <input
-                    type="text"
-                    name="title"
-                    onChange={(e) => setPostData({
-                        ...postData,
-                        title: e.target.value
-                    })}/>
+                <div>
+                    <Label fontSize = "20px" fontWeight = "bold" color = "black">title</Label><br/>
+                    <Input
+                        fontSize="15px"
+                        width = "500px"
+                        type="text"
+                        name="title"
+                        margin="10px 0px"
+                        placeholder="ex) 타이틀 입력하기"
+                        onChange={(e) => setPostData({
+                            ...postData,
+                            title: e.target.value
+                        })}/>
+                </div>
                 <br/>
-                <label>content :</label>
-                <textarea
-                    name="content"
-                    onChange={(e) => setPostData({
-                        ...postData,
-                        content: e.target.value
-                    })}></textarea>
+                <div>
+                    <Label fontSize = "20px" fontWeight = "bold" color = "black">content</Label><br/>
+                    <Textarea
+                        fontSize="15px"
+                        width = "500px"
+                        name="content"
+                        placeholder="ex) 컨텐츠 입력하기"
+                                                margin = "10px 0px"
+                        onChange={(e) => setPostData({
+                            ...postData,
+                            content: e.target.value
+                        })}></Textarea>
+                </div>
                 <br/>
-                <button onClick={addPost}>등록</button>
+                <MyButton
+                    width="100px"
+                    fontSize="15px"
+                    fontWeight="bold"
+                    onClick={addPost}>등록</MyButton>
 
             </div>
         </Page>
