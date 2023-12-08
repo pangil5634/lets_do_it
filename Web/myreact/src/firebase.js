@@ -1,5 +1,4 @@
 
-import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import { initializeApp } from "firebase/app"
 import { getFirestore } from "@firebase/firestore"
@@ -18,8 +17,4 @@ const firebaseConfig = {
 
 // firebaseConfig 정보로 firebase 시작
 const app = initializeApp(firebaseConfig)
-
 export const db = getFirestore(app) // DB 정보
-// export const authService = firebase.auth() // 로그인 모듈
-// export const firebaseInstance = firebase // 소셜로그인
-
