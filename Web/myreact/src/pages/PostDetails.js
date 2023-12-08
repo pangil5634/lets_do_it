@@ -1,6 +1,9 @@
+// react import
 import React from 'react';
-import {useFirebase} from '../App';
 import { useParams } from 'react-router-dom';
+// firebase import
+import { useFirebase } from '../App';
+// 컴포넌트 import
 import { Page } from '../components/Page';
 
 function PostDetails() {

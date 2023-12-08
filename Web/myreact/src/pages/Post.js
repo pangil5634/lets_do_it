@@ -1,27 +1,31 @@
-// Post.js
+// react import
 import React from 'react';
+import {Link} from 'react-router-dom';
+// 컴포넌트 import
+import { H2 } from "../components/Heading";
 import { Page, MyButton } from '../components/Page';
 import { Div } from '../components/Menubar';
-import {useFirebase} from '../App';
-import {Link} from 'react-router-dom';
-import {H2} from "../components/Heading";
+// firebase import
 import {deleteDoc, doc} from 'firebase/firestore';
 import { db } from '../firebase';
-import { getAuth } from 'firebase/auth'; // signOut 추가
-
+import { getAuth } from 'firebase/auth'; 
+import {useFirebase} from '../App';
 
 function Post() {
     // useFirebase 훅을 사용하여 Firebase 데이터에 접근
-    const {posts, setPosts} = useFirebase(); // auth 추가
-    const auth = getAuth();
+    const {posts, setPosts} = useFirebase(); 
+    const auth = getAuth(); // 인증 모듈을 저장하고 있는 변수 선언
+    
+    // post를 삭제하는 핸들러
     const deletePost = async (postId) => {
         try {
-            const updatedPosts = posts.filter((post) => post.id !== postId);
-            setPosts(updatedPosts);
+            const updatedPosts = posts.filter((post) => post.id !== postId); // 데이터를 삭제 진행
+            setPosts(updatedPosts); // 삭제가 이루어진 데이터를 기반으로 수정
 
             console.log('Firestore에서 게시물 삭제 중:', postId);
             await deleteDoc(doc(db, 'posts', postId));
             console.log('Firestore에서 게시물이 성공적으로 삭제되었습니다.');
+            alert("데이터가 정상적으로 삭제되었습니다.");
         } catch (error) {
             console.error("게시물 삭제 중 오류 발생:", error);
         }
