@@ -45,7 +45,7 @@ function AddPage() {
                     <Label fontSize = "20px" fontWeight = "bold" color = "black">title</Label><br/>
                     <Input
                         fontSize="15px"
-                        width = "500px"
+                        width = "80vw"
                         type="text"
                         name="title"
                         margin="10px 0px"
@@ -60,7 +60,7 @@ function AddPage() {
                     <Label fontSize = "20px" fontWeight = "bold" color = "black">content</Label><br/>
                     <Textarea
                         fontSize="15px"
-                        width = "500px"
+                        width = "80vw"
                         name="content"
                         placeholder="ex) 컨텐츠 입력하기"
                                                 margin = "10px 0px"

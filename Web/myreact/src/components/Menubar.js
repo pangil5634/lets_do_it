@@ -33,6 +33,7 @@ export const LogInOutButton = styled.button `
     height : 30px;
     border-radius: 5px;
     margin : 0px 20px;
+    color : black;
 
     &:hover{
         background-color: black;

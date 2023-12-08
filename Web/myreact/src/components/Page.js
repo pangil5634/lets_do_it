@@ -16,6 +16,7 @@ export const MyButton = styled.button `
     font-weight: ${props => props.fontWeight || ""};   
     height : 30px;
     border-radius: 5px;
+    color : black;
 
     &:hover{
         background-color: black;
