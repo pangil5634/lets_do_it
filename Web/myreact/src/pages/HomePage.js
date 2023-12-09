@@ -26,9 +26,9 @@ function HomePage() {
                 <P fontSize="5vw" fontWeight="bold">팡팡 터지는 팡일이의 WebSite</P>
 
                 {/*  */}
-                <FieldSet width = "90%"  fontSize="1vw">
+                <FieldSet width = "90%"  fontSize="20px">
                     <Legend
-                        fontSize = "1.5vw"
+                        fontSize = "30px"
                         fontWeight = "bold"
                         color = "black"
                     >자기소개</Legend>

@@ -59,10 +59,16 @@ export const Textarea = styled.textarea `
 
 export const FieldSet = styled.fieldset `
     width : ${props => props.width || ""};
+     @media (max-width: 768px) {
+        font-size: 15px;
+    }
     font-size : ${props => props.fontSize || ""};
 `;
 
 export const Legend = styled.legend `
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
     font-size : ${props => props.fontSize || ""};
     font-weight: ${props => props.fontWeight || ""};
     color: ${props => props.color || ""};
