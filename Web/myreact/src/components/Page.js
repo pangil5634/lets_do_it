@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const Page = styled.div `
-    width : 100%;
+    width : ${props => props.width || "100%"};
     height : 100vh;
     box-sizing: border-box;
     padding : 20px;
-    background-color: #FFF7D4;
-    color : #527853;
+    background-color : ${props => props.backgroundColor || "#FFF7D4"};
+    color : ${props => props.color || "#527853"};
+    display: flex;
+    align-items:  ${props => props.alignItems || ""};
+    flex-direction: ${props => props.flexDirection || "column"};
+    justify-content: ${props => props.justifyContent || ""};
 `;
 
 export const MyButton = styled.button `
@@ -50,4 +54,15 @@ export const Textarea = styled.textarea `
     height : 100px;
     border : 1px solid #e9eaec;
     margin : ${props => props.margin || ""};
+`;
+
+export const FieldSet = styled.fieldset `
+    width : ${props => props.width || ""};
+    font-size : ${props => props.fontSize || ""};
+`;
+
+export const Legend = styled.legend `
+    font-size : ${props => props.fontSize || ""};
+    font-weight: ${props => props.fontWeight || ""};
+    color: ${props => props.color || ""};
 `;
