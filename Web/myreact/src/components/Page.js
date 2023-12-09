@@ -11,6 +11,7 @@ export const Page = styled.div `
     align-items:  ${props => props.alignItems || ""};
     flex-direction: ${props => props.flexDirection || "column"};
     justify-content: ${props => props.justifyContent || ""};
+    border-radius: ${props => props.borderRadius || ""};
 `;
 
 export const MyButton = styled.button `

@@ -15,7 +15,7 @@ function HomePage() {
 
     return (
         <Page alignItems="center">
-            <Page width="90%" backgroundColor="white" alignItems="center">
+            <Page width="90%" backgroundColor="white" alignItems="center" borderRadius = "20px">
                 {/* 로그인 시 보여지는 유저 이름 */}
                 {
                     user && <div>
