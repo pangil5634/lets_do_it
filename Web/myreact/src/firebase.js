@@ -1,8 +1,7 @@
-
-import "firebase/compat/auth"
-import { initializeApp } from "firebase/app"
-import { getFirestore } from "@firebase/firestore"
-
+// firebase.js
+import {initializeApp} from 'firebase/app';
+import {getFirestore} from 'firebase/firestore';
+import {getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage';
 
 const firebaseConfig = {
     // firebase 설정과 관련된 개인 정보
@@ -16,5 +15,15 @@ const firebaseConfig = {
 }
 
 // firebaseConfig 정보로 firebase 시작
-const app = initializeApp(firebaseConfig)
-export const db = getFirestore(app) // DB 정보
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app); // Firebase DB 정보
+const storage = getStorage(app); // Firebase Storage 정보
+
+export {
+    app,
+    db,
+    storage,
+    ref,
+    uploadBytes,
+    getDownloadURL
+};
