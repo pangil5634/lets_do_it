@@ -20,6 +20,8 @@ export const MenuBar = styled.div `
     a:hover{
         color : #FFF7D4;
     }
+    font-size: ${props => props.fontSize || ""};
+    font-weight: ${props => props.fontWeight || ""};
 
 `;
 
@@ -43,6 +45,13 @@ export const LogInOutButton = styled.button `
 
 export const Div = styled.div `
     display: flex;
-    justify-content: start;
+    justify-content:  ${props => props.justifyContent || "start"};
     align-items: center;
+    width : ${props => props.width || ""};
+    height : ${props => props.height || ""};
+    background-color: ${props => props.backgroundColor || ""};;
+    margin : ${props => props.margin || ""};
+    flex-wrap: ${props => props.flexWrap || ""};
+    border-radius:  ${props => props.borderRadius || ""};
+    flex-direction:  ${props => props.flexDirection || ""};
 `;
