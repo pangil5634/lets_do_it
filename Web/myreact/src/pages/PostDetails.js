@@ -1,10 +1,10 @@
 // react import
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 // firebase import
-import { useFirebase } from '../App';
+import {useFirebase} from '../App';
 // 컴포넌트 import
-import { Page } from '../components/Page';
+import {Page} from '../components/Page';
 
 function PostDetails() {
     // Firebase 컨텍스트에서 데이터 가져오기
@@ -21,9 +21,17 @@ function PostDetails() {
     }
 
     return (
-        <Page>
-            <h1>{post.title}</h1>
-            <p>{post.content}</p>
+        <Page height="100vh" alignItems="center">
+            <Page
+                width="90%"
+                backgroundColor="white"
+                alignItems="center"
+                borderRadius="20px"
+                height="100%"
+            >
+                <h1>{post.title}</h1>
+                <p>{post.content}</p>
+            </Page>
         </Page>
     );
 }
