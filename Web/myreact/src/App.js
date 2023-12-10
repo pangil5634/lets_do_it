@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import {Route, Routes} from 'react-router-dom';
 // firebase
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import {getAuth, onAuthStateChanged} from 'firebase/auth';
 import { db } from './firebase';
 // Pages
@@ -32,7 +32,8 @@ function App() {
             // posts라는 컬렉션을 참조
             // 컬렉션의 참조를 만들어서 데이터를 가져옴
             const postsCollection = collection(db, 'posts'); // posts 라는 컬렉션을 참조하는 변수 선언
-            const querySnapshot = await getDocs(postsCollection); // postColection 변수를 통해 getDocs 동작을 진행하는 querySnapshot 변수 선언
+            const q = query(postsCollection, orderBy('title', 'asc'));
+            const querySnapshot = await getDocs(q); // postColection 변수를 통해 getDocs 동작을 진행하는 querySnapshot 변수 선언
 
             // querySnapshot에서 각 문서의 데이터를 추출하여 배열로 저장
             const data = []; // 각 문서의 데이터를 저장하는 배열

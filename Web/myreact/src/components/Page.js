@@ -22,6 +22,7 @@ export const MyButton = styled.button `
     height : 30px;
     border-radius: 5px;
     color : black;
+    margin : ${props => props.margin || ""};
 
     &:hover{
         background-color: black;

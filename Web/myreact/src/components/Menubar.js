@@ -46,7 +46,7 @@ export const LogInOutButton = styled.button `
 export const Div = styled.div `
     display: flex;
     justify-content:  ${props => props.justifyContent || "start"};
-    align-items: center;
+    align-items:   ${props => props.alignItems || "center"};
     width : ${props => props.width || ""};
     height : ${props => props.height || ""};
     background-color: ${props => props.backgroundColor || ""};;
