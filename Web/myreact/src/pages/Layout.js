@@ -9,6 +9,7 @@ import {MenuBar, LogInOutButton, Div} from "../components/Menubar";
 import "../components/aTag.css";
 // firebase import
 import {signInWithPopup, signOut, GoogleAuthProvider, getAuth, onAuthStateChanged} from 'firebase/auth';
+import {Label} from "../components/Page";
 
 function Layout() {
     const auth = getAuth(); // 인증 모듈을 저장하고 있는 변수 선언
@@ -84,14 +85,14 @@ function Layout() {
                                     }}/>
                             : <div>
                                     <Link to="/">
-                                        <label>Home</label>
+                                        <Label fontWeight="bold">Home</Label>
                                     </Link>
                                     <Link to="/Post">
-                                        <label>Post</label>
+                                        <Label fontWeight="bold">Post</Label>
                                     </Link>
                                     {
                                         auth.currentUser && <Link to="/MyPage">
-                                                <label>MyPage</label>
+                                                <Label fontWeight="bold">MyPage</Label>
                                             </Link>
                                     }
                                 </div>
@@ -101,11 +102,15 @@ function Layout() {
                     {
                         showMenu && (
                             <div>
-                                <Link to="/">Home</Link>
-                                <Link to="/Post">Post</Link>
+                                <Link to="/">
+                                    <Label fontWeight="bold">Home</Label>
+                                </Link>
+                                <Link to="/Post">
+                                    <Label fontWeight="bold">Post</Label>
+                                </Link>
                                 {
                                     auth.currentUser && <Link to="/MyPage">
-                                            <label>MyPage</label>
+                                            <Label fontWeight="bold">MyPage</Label>
                                         </Link>
                                 }
                             </div>

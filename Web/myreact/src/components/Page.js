@@ -59,7 +59,7 @@ export const Textarea = styled.textarea `
 
 export const FieldSet = styled.fieldset `
     width : ${props => props.width || ""};
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
         font-size: 15px;
     }
     font-size : ${props => props.fontSize || ""};

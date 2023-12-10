@@ -36,6 +36,8 @@ export const LogInOutButton = styled.button `
     border-radius: 5px;
     margin : 0px 20px;
     color : black;
+    font-size : 15px;
+    font-weight: bold;
 
     &:hover{
         background-color: black;
