@@ -3,6 +3,7 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom"; // useNavigate 추가
 // 컴포넌트 import
 import {Page, Label, Input, Textarea, MyButton} from "../components/Page";
+import ImageUpload from "../components/ImageUpload";
 // firebase improt
 import {db} from "../firebase";
 import {collection, addDoc} from "firebase/firestore";
@@ -12,18 +13,29 @@ function AddPage() {
     const {posts, setPosts} = useFirebase(); // post 변수 선언
     const [postData, setPostData] = useState({title: "", content: ""}); // 새로 추가할 newPost 변수 선언
     const navigate = useNavigate(); // useNavigate 훅 사용
+    const [imageUrl, setImageUrl] = useState(''); // 이미지 URL 상태 추가
+
+    // 이미지 업로드 후 호출될 함수
+    const handleImageUpload = (url) => {
+        setImageUrl(url);
+    };
 
     // newPost를 add하는 핸들러
     const addPost = async () => {
-        if (postData.title && postData.content) { // title과 content가 둘 다 있을 경우에만 등록 가능
+        if (postData.title && postData.content && imageUrl) {
             try {
-                const docRef = await addDoc(collection(db, "posts"), postData); // posts 컬렉션에 postData를 add한다.
+                const docRef = await addDoc(collection(db, "posts"), {
+                    ...postData,
+                    imageUrl: imageUrl, // 이미지 URL 추가
+                });
+
                 alert("데이터가 성공적으로 추가되었습니다");
 
                 setPosts([
                     ...posts, {
                         id: docRef.id,
-                        ...postData
+                        ...postData,
+                        imageUrl: imageUrl
                     }
                 ]);
 
@@ -42,10 +54,10 @@ function AddPage() {
             <h1>등록 페이지입니다.</h1>
             <div>
                 <div>
-                    <Label fontSize = "20px" fontWeight = "bold" color = "black">title</Label><br/>
+                    <Label fontSize="20px" fontWeight="bold" color="black">title</Label><br/>
                     <Input
                         fontSize="15px"
-                        width = "80vw"
+                        width="80vw"
                         type="text"
                         name="title"
                         margin="10px 0px"
@@ -57,24 +69,27 @@ function AddPage() {
                 </div>
                 <br/>
                 <div>
-                    <Label fontSize = "20px" fontWeight = "bold" color = "black">content</Label><br/>
+                    <Label fontSize="20px" fontWeight="bold" color="black">content</Label><br/>
                     <Textarea
                         fontSize="15px"
-                        width = "80vw"
+                        width="80vw"
                         name="content"
                         placeholder="ex) 컨텐츠 입력하기"
-                                                margin = "10px 0px"
+                        margin="10px 0px"
                         onChange={(e) => setPostData({
                             ...postData,
                             content: e.target.value
                         })}></Textarea>
                 </div>
+                <div>
+                    <Label fontSize="20px" fontWeight="bold" color="black">content</Label><br/>
+                    <ImageUpload onImageUpload={handleImageUpload}/>
+                </div>
+                {imageUrl &&
+                    <img src={imageUrl} alt="이미지" />
+                }
                 <br/>
-                <MyButton
-                    width="100px"
-                    fontSize="15px"
-                    fontWeight="bold"
-                    onClick={addPost}>등록</MyButton>
+                <MyButton width="100px" fontSize="15px" fontWeight="bold" onClick={addPost}>등록</MyButton>
 
             </div>
         </Page>
