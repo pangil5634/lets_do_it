@@ -57,15 +57,15 @@ function Post() {
                                 backgroundColor="gray"
                                 margin="30px 20px"
                                 borderRadius="15px"
-                                justifyContent="center"
+                                justifyContent="start"
                                 flexDirection="column">
                                 {/* Link 컴포넌트를 사용하여 페이지 이동 */}
                                 {
                                     auth.currentUser && (
-                                        <MyButton onClick={() => deletePost(post.id)} width="50%" fontSize = "1.3rem" fontWeight = "bold">삭제</MyButton>
+                                        <MyButton onClick={() => deletePost(post.id)} width="50%" fontSize = "1.3rem" fontWeight = "bold" margin = "20px 0px 0px 0px">삭제</MyButton>
                                     )
                                 }
-                                <Div width = "90%" justifyContent = "center">
+                                <Div width = "90%" justifyContent = "center" >
                                     <Link to={`/post/${post.id}`}>
                                         <H2 hoverColor="skyblue">{post.title}</H2>
                                     </Link>
