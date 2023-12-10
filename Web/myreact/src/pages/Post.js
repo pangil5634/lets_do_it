@@ -36,29 +36,47 @@ function Post() {
     };
 
     return (
-        <Page>
-            <h1>Post 페이지입니다.</h1>
-            <Link to="/AddPage">
-                {auth.currentUser && <MyButton>등록 페이지</MyButton>}
-            </Link>
+        <Page alignItems="center">
+            <Page
+                width="90%"
+                backgroundColor="white"
+                alignItems="center"
+                borderRadius="20px">
+                <h1>Post 페이지입니다.</h1>
+                <Link to="/AddPage">
+                    {auth.currentUser && <MyButton fontSize = "1.3rem" fontWeight = "bold">등록 페이지</MyButton>}
+                </Link>
+                <Div width="100%" flexWrap="wrap" justifyContent="center">
+                    {/* posts 배열을 사용하여 데이터를 렌더링 */}
+                    {
+                        posts.map((post) => (
+                            <Div
+                                key={post.id}
+                                width="250px"
+                                height="300px"
+                                backgroundColor="gray"
+                                margin="30px 20px"
+                                borderRadius="15px"
+                                justifyContent="center"
+                                flexDirection="column">
+                                {/* Link 컴포넌트를 사용하여 페이지 이동 */}
+                                {
+                                    auth.currentUser && (
+                                        <MyButton onClick={() => deletePost(post.id)} width="50%" fontSize = "1.3rem" fontWeight = "bold">삭제</MyButton>
+                                    )
+                                }
+                                <Div width = "90%" justifyContent = "center">
+                                    <Link to={`/post/${post.id}`}>
+                                        <H2 hoverColor="skyblue">{post.title}</H2>
+                                    </Link>
+                                </Div>
+                                {/* 사용자가 로그인되어 있는 경우에만 삭제 버튼 표시 */}
 
-            {/* posts 배열을 사용하여 데이터를 렌더링 */}
-            {
-                posts.map((post) => (
-                    <Div key={post.id}>
-                        {/* Link 컴포넌트를 사용하여 페이지 이동 */}
-                        <Link to={`/post/${post.id}`}>
-                            <H2 hoverColor="skyblue">{post.title}</H2>
-                        </Link>
-                        {/* 사용자가 로그인되어 있는 경우에만 삭제 버튼 표시 */}
-                        {
-                            auth.currentUser && (
-                                <MyButton onClick={() => deletePost(post.id)} marginLeft="20px">삭제</MyButton>
-                            )
-                        }
-                    </Div>
-                ))
-            }
+                            </Div>
+                        ))
+                    }
+                </Div>
+            </Page>
         </Page>
     );
 }

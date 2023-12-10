@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Page = styled.div `
     width : ${props => props.width || "100%"};
-    height : 100vh;
+    height : auto;
     box-sizing: border-box;
     padding : 20px;
     background-color : ${props => props.backgroundColor || "#FFF7D4"};
@@ -28,7 +28,6 @@ export const MyButton = styled.button `
         color : white;
     }
     margin-left : ${props => props.marginLeft || ""};
-
     
 `;
 
