@@ -86,8 +86,12 @@ function AddPage() {
                     <ImageUpload onImageUpload={handleImageUpload}/>
                 </div>
                 {imageUrl &&
-                    <img src={imageUrl} alt="이미지" />
+                    <img src={imageUrl} alt="이미지" style={{
+                                                    maxWidth: '300px',
+                                                    borderRadius : "15px"
+                                                }}/>
                 }
+                <br />
                 <br/>
                 <MyButton width="100px" fontSize="15px" fontWeight="bold" onClick={addPost}>등록</MyButton>
 
