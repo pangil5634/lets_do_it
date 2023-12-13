@@ -32,8 +32,9 @@ const ImageUpload = ({onImageUpload}) => {
             <input type="file" onChange={handleChange}/>
             <br/>
             <button onClick={handleUpload}>Upload</button>
+            <br />
             <br/>
-            <progress value={progress} max="100"/>
+            {/* <progress value={progress} max="100"/> */}
         </div>
     );
 };

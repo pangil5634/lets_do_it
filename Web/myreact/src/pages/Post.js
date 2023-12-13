@@ -83,7 +83,8 @@ function Post() {
                                                 src={post.imageUrl}
                                                 alt="Post"
                                                 style={{
-                                                    maxWidth: '100%'
+                                                    maxWidth: '100%',
+                                                    borderRadius : "15px"
                                                 }}/>
                                         </Div>
                                     )
