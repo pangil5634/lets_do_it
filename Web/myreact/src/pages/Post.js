@@ -44,7 +44,7 @@ function Post() {
                 borderRadius="20px">
                 <h1>Post 페이지입니다.</h1>
                 <Link to="/AddPage">
-                    {auth.currentUser && <MyButton fontSize = "1.3rem" fontWeight = "bold">등록 페이지</MyButton>}
+                    {auth.currentUser && <MyButton fontSize="1.3rem" fontWeight="bold">등록 페이지</MyButton>}
                 </Link>
                 <Div width="100%" flexWrap="wrap" justifyContent="center">
                     {/* posts 배열을 사용하여 데이터를 렌더링 */}
@@ -62,15 +62,32 @@ function Post() {
                                 {/* Link 컴포넌트를 사용하여 페이지 이동 */}
                                 {
                                     auth.currentUser && (
-                                        <MyButton onClick={() => deletePost(post.id)} width="50%" fontSize = "1.3rem" fontWeight = "bold" margin = "20px 0px 0px 0px">삭제</MyButton>
+                                        <MyButton
+                                            onClick={() => deletePost(post.id)}
+                                            width="50%"
+                                            fontSize="1.3rem"
+                                            fontWeight="bold"
+                                            margin="20px 0px 0px 0px">삭제</MyButton>
                                     )
                                 }
-                                <Div width = "90%" justifyContent = "center" >
+                                <Div width="90%" justifyContent="center" flexDirection="column">
                                     <Link to={`/post/${post.id}`}>
                                         <H2 hoverColor="skyblue">{post.title}</H2>
                                     </Link>
+                            
                                 </Div>
-                                {/* 사용자가 로그인되어 있는 경우에만 삭제 버튼 표시 */}
+                                {
+                                    post.imageUrl && (
+                                        <Div width = "60%">
+                                            <img
+                                                src={post.imageUrl}
+                                                alt="Post"
+                                                style={{
+                                                    maxWidth: '100%'
+                                                }}/>
+                                        </Div>
+                                    )
+                                }
 
                             </Div>
                         ))
