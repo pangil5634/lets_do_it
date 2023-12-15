@@ -6,7 +6,7 @@ import {useFirebase} from '../App';
 import ImageCat from '../image/cat.png';
 // 컴포넌트 import
 import {Page, FieldSet, Legend} from '../components/Page';
-import {UserName} from '../components/Menubar';
+import {Div, UserName} from '../components/Menubar';
 import {P} from '../components/Heading';
 
 function HomePage() {
@@ -40,6 +40,9 @@ function HomePage() {
 
                     <p>귀엽고 재밌게 봐주시면 좋겠습니다~</p>
                 </FieldSet>
+                <Div>
+                    여기에는 어떤 데이터가 들어갈까요?
+                </Div>
             </Page>
         </Page>
     );
