@@ -29,8 +29,10 @@ function PostDetails() {
 
                 {/* 게시글 제목 */}
                 <h1>{post.title}</h1>
+                
                 {/* 게시글 내용 */}
                 <p>{post.content}</p>
+
                 {/* 게시글 이미지 */}
                 {
                     post.imageUrl && (
