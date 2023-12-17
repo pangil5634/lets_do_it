@@ -43,13 +43,19 @@ function Post() {
                 alignItems="center"
                 borderRadius="20px">
                 <h1>Post 페이지입니다.</h1>
+
+                {/* 등록 페이지로 이동하는 버튼 */}
+                {/* 어드민 관리자만 뜨게 한다. */}
                 <Link to="/AddPage">
                     {auth.currentUser && <MyButton fontSize="1.3rem" fontWeight="bold">등록 페이지</MyButton>}
                 </Link>
+
+                {/* 등록된 포스트 내역을 보여주는 영역 */}
                 <Div width="100%" flexWrap="wrap" justifyContent="center">
                     {/* posts 배열을 사용하여 데이터를 렌더링 */}
                     {
                         posts.map((post) => (
+                            // 포스트 영역 하나의 태그
                             <Div
                                 key={post.id}
                                 width="250px"
@@ -59,7 +65,9 @@ function Post() {
                                 borderRadius="15px"
                                 justifyContent="start"
                                 flexDirection="column">
+
                                 {/* Link 컴포넌트를 사용하여 페이지 이동 */}
+                                {/* 어드민 관리자만 뜨게 한다. */}
                                 {
                                     auth.currentUser && (
                                         <MyButton
@@ -70,21 +78,24 @@ function Post() {
                                             margin="20px 0px 0px 0px">삭제</MyButton>
                                     )
                                 }
+
+                                {/* 포스트의 제목 */}
                                 <Div width="90%" justifyContent="center" flexDirection="column">
                                     <Link to={`/post/${post.id}`}>
                                         <H2 hoverColor="skyblue">{post.title}</H2>
                                     </Link>
-                            
                                 </Div>
+
+                                {/* 포스트의 이미지 */}
                                 {
                                     post.imageUrl && (
-                                        <Div width = "60%">
+                                        <Div width="60%">
                                             <img
                                                 src={post.imageUrl}
                                                 alt="Post"
                                                 style={{
                                                     maxWidth: '100%',
-                                                    borderRadius : "15px"
+                                                    borderRadius: "15px"
                                                 }}/>
                                         </Div>
                                     )
