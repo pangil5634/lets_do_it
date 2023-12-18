@@ -51,8 +51,13 @@ function AddPage() {
 
     return (
         <Page>
+            {/* 타이틀 */}
             <h1>등록 페이지입니다.</h1>
+
+
             <div>
+
+                {/* 타이틀 입력하는 부분 */}
                 <div>
                     <Label fontSize="20px" fontWeight="bold" color="black">title</Label><br/>
                     <Input
@@ -67,7 +72,9 @@ function AddPage() {
                             title: e.target.value
                         })}/>
                 </div>
-                <br/>
+                <br />
+                
+                {/* 컨텐츠 입려하는 부분 */}
                 <div>
                     <Label fontSize="20px" fontWeight="bold" color="black">content</Label><br/>
                     <Textarea
@@ -81,6 +88,8 @@ function AddPage() {
                             content: e.target.value
                         })}></Textarea>
                 </div>
+
+                {/* 이미지 입력하는 부분 */}
                 <div>
                     <Label fontSize="20px" fontWeight="bold" color="black">content</Label><br/>
                     <ImageUpload onImageUpload={handleImageUpload}/>
@@ -92,7 +101,9 @@ function AddPage() {
                                                 }}/>
                 }
                 <br />
-                <br/>
+                <br />
+                
+                {/* 등록 버튼 */}
                 <MyButton width="100px" fontSize="15px" fontWeight="bold" onClick={addPost}>등록</MyButton>
 
             </div>
