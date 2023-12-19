@@ -73,3 +73,25 @@ export const Legend = styled.legend `
     font-weight: ${props => props.fontWeight || ""};
     color: ${props => props.color || ""};
 `;
+
+export const Img = styled.img `
+    width : 100px;
+    @media (max-width: 768px) {
+        width : 50px;
+    }
+
+-webkit-filter: ${ ({
+    blur}) => (blur ? 'blur(0)' : 'blur(3px)')};
+    filter: ${ ({
+        blur}) => (blur ? 'blur(0)' : 'blur(3px)')};
+
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+
+    &:hover {
+    -webkit-filter: ${ ({
+            blur}) => (blur ? 'blur(3px)' : 'blur(0)')};
+    filter: ${ ({
+                blur}) => (blur ? 'blur(3px)' : 'blur(0)')};
+    }
+`;
