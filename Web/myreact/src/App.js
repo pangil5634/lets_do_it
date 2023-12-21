@@ -13,6 +13,7 @@ import MyPage from './pages/MyPage';
 import Post from './pages/Post';
 import PostDetails from './pages/PostDetails';
 import AddPage from './pages/AddPage';
+import Markdown from './pages/Markdown';
 
 //
 //
@@ -90,7 +91,8 @@ function App() {
                     <Route path="/MyPage" element={<MyPage />}/>
                     <Route path="/post" element={<Post/>}/>
                     <Route path="/post/:postId" element={<PostDetails />}/>
-                    <Route path="/AddPage" element={<AddPage/>}/>
+                    <Route path="/AddPage" element={<AddPage />} />
+                    <Route path="/Markdown" element={<Markdown/>}/>
                 </Route>
             </Routes>
         </FirebaseContext.Provider>
