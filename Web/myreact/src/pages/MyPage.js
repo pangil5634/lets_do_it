@@ -13,6 +13,7 @@ function MyPage() {
 
                 {/* 컨텐츠 */}
                 <p>내용이 업데이트 될 예정입니다.</p>
+                <img src={ require('../image/cat.png')} alt = "이미지"></img>
             </Page>
         </Page>
     );
