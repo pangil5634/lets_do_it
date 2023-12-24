@@ -42,9 +42,10 @@ export const Input = styled.input `
     font-size : ${props => props.fontSize || ""};
     color: ${props => props.color || ""};
     width : ${props => props.width || ""};
-    height : 30px;
+    height : ${props => props.height || "30px"};
     border : 1px solid #e9eaec;
     margin : ${props => props.margin || ""};
+    border-radius: ${props => props.borderRadius || "" };
 `;
 
 export const Textarea = styled.textarea `
@@ -76,6 +77,7 @@ export const Legend = styled.legend `
 
 export const Img = styled.img `
     width : ${props => props.width || "100px"};
+    border-radius:  ${props => props.borderRadius || ""};
     @media (max-width: 768px) {
         width : 50px;
     }
