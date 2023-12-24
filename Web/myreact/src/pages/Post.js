@@ -95,6 +95,7 @@ function Post() {
                                                 blur={true}
                                                 src={post.imageUrl}
                                                 alt="Post"
+                                                widthOnMobile = "100%"
                                                 style={{
                                                     borderRadius: "15px"
                                                 }}/>
