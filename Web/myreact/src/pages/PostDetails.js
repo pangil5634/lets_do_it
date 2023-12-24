@@ -74,6 +74,7 @@ function PostDetails() {
                                     width="100%"
                                     borderRadius="30px"
                                     blur={true}
+                                    widthOnMobile="100%"
                                     src={post.imageUrl}
                                     alt="Post"/>
                             </Div>
@@ -101,15 +102,18 @@ function PostDetails() {
                             onChange={handleCommentChange}
                             onKeyDown={handleKeyDown}
                             value={comment}></Input>
-                        <MyButton onClick={handleAddComment} margin="20px 0px">추가</MyButton>
+                        <MyButton onClick={handleAddComment} margin="20px 0px" fontSize = "inherit">추가</MyButton>
 
                     </Div>
 
                     {/* 댓글 목록 출력 */}
-                    <Div flexDirection="column" padding="10px" alignItems="start" width="90%">
+                    <Div flexDirection="column" padding="10px" alignItems="start" width="100%">
                         {
                             commentList.map(
-                                (comment, index) => (<P key={index} color="white">{comment}</P>)
+                                (comment, index) => (
+                                    <Div width = "100%" backgroundColor = "white" margin = "5px 0px" borderRadius = "10px" padding = "5px">
+                                    <P key={index} color="black" fontWeight = "bold">{comment}</P>
+                                </Div>)
                             )
                         }
                     </Div>

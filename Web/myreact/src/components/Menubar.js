@@ -51,8 +51,10 @@ export const Div = styled.div `
     align-items:   ${props => props.alignItems || "center"};
     width : ${props => props.width || ""};
     height : ${props => props.height || ""};
-    background-color: ${props => props.backgroundColor || ""};;
+    box-sizing: border-box;
+    background-color: ${props => props.backgroundColor || ""};
     margin : ${props => props.margin || ""};
+    padding: ${props => props.padding || ""};
     flex-wrap: ${props => props.flexWrap || ""};
     border-radius:  ${props => props.borderRadius || ""};
     flex-direction:  ${props => props.flexDirection || ""};

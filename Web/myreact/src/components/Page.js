@@ -79,9 +79,9 @@ export const Img = styled.img `
     width : ${props => props.width || "100px"};
     border-radius:  ${props => props.borderRadius || ""};
     @media (max-width: 768px) {
-        width : 50px;
+        width: ${props => (props.widthOnMobile || "50px")};
     }
-
+    
 -webkit-filter: ${ ({
     blur}) => (blur ? 'blur(0)' : 'blur(3px)')};
     filter: ${ ({
