@@ -16,4 +16,5 @@ export const P = styled.p `
     font-weight: ${props => props.fontWeight || ''};
     margin : ${props => props.margin || ''};
     text-align:  ${props => props.textAlign || ''};
+    color : ${props => props.color || "black"}
 `;
