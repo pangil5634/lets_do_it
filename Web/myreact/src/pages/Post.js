@@ -3,7 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 // 컴포넌트 import
 import {H2} from "../components/Heading";
-import {Page, MyButton} from '../components/Page';
+import {Page, MyButton, Img} from '../components/Page';
 import {Div} from '../components/Menubar';
 // firebase import
 import {deleteDoc, doc} from 'firebase/firestore';
@@ -90,11 +90,12 @@ function Post() {
                                 {
                                     post.imageUrl && (
                                         <Div width="60%">
-                                            <img
+                                            <Img
+                                                width = "100%"
+                                                blur={true}
                                                 src={post.imageUrl}
                                                 alt="Post"
                                                 style={{
-                                                    maxWidth: '100%',
                                                     borderRadius: "15px"
                                                 }}/>
                                         </Div>
