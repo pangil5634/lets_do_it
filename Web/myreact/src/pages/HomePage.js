@@ -8,6 +8,7 @@ import ImageCat from '../image/cat.png';
 import {Page, FieldSet, Legend, Img, Label} from '../components/Page';
 import {Div, UserName} from '../components/Menubar';
 import {P} from '../components/Heading';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
     // 변수 선언
@@ -73,9 +74,9 @@ function HomePage() {
 
                     </Div>
                 </FieldSet>
-                {/* <Div> */}
-
-                {/* </Div> */}
+                <Div>
+                <Link to = "/Counter"><h1>Recoil 연습하기</h1></Link>
+                </Div>
             </Page>
         </Page>
     );

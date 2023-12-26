@@ -10,6 +10,8 @@ import {deleteDoc, doc} from 'firebase/firestore';
 import {db} from '../firebase';
 import {getAuth} from 'firebase/auth';
 import {useFirebase} from '../App';
+// import {useRecoilState} from 'recoil';
+// import {countState, titleState} from '../context/Atom';
 
 function Post() {
     // useFirebase 훅을 사용하여 Firebase 데이터에 접근
@@ -34,9 +36,12 @@ function Post() {
             console.error("게시물 삭제 중 오류 발생:", error);
         }
     };
-
+    // const [counter, setCounter] = useRecoilState(countState);
+    // const [title, setTitle] = useRecoilState(titleState);
     return (
         <Page alignItems="center">
+            {/* <h1>Counter 확인하기 : {counter}</h1>
+            <h1>Title 확인하기 : {title}</h1> */}
             <Page
                 width="90%"
                 backgroundColor="white"
@@ -91,11 +96,11 @@ function Post() {
                                     post.imageUrl && (
                                         <Div width="60%">
                                             <Img
-                                                width = "100%"
+                                                width="100%"
                                                 blur={true}
                                                 src={post.imageUrl}
                                                 alt="Post"
-                                                widthOnMobile = "100%"
+                                                widthOnMobile="100%"
                                                 style={{
                                                     borderRadius: "15px"
                                                 }}/>
