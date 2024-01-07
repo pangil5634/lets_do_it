@@ -10,6 +10,7 @@ import {Div, UserName} from '../components/Menubar';
 import {P} from '../components/Heading';
 import { Link } from 'react-router-dom';
 
+// 메인 페이지
 function HomePage() {
     // 변수 선언
     const {user} = useFirebase();
@@ -21,6 +22,7 @@ function HomePage() {
                 backgroundColor="white"
                 alignItems="center"
                 borderRadius="20px">
+                
                 {/* 로그인 시 보여지는 유저 이름 */}
                 {
                     user && <div>
