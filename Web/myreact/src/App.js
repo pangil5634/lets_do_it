@@ -1,11 +1,10 @@
+import styled from 'styled-components';
 import './App.css';
 import MyRoute from './MyRoute';
 
 function App() {
   return (
-    <div>
       <MyRoute/>
-    </div>
   );
 }
 
