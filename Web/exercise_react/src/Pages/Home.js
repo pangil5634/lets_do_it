@@ -10,6 +10,7 @@ function Home() {
             <MenuLink to="/atom_context">Atom Contet</MenuLink>
             <MenuLink to="/atom_context_result">Atom Contet Result</MenuLink>
             <MenuLink to="/axios_test">Axios Test</MenuLink>
+            <MenuLink to="/display_flex">Display flex</MenuLink>
         </Container>
     );
 }

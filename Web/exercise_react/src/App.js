@@ -6,6 +6,7 @@ import AtomContextResult from './Pages/AtomContext/AtomContextResult';
 import Inputs from './Pages/Inputs';
 import Home from './Pages/Home';
 import AxiosTest from './Pages/Axios/AxiosTest';
+import DisplayFlex from './Pages/Display/DisplayFlex';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path = "/" index element ={<Home/>}/>
         <Route path="/atom_context" element={<AtomContext />} />
         <Route path="/atom_context_result" element={<AtomContextResult />} />
-        <Route path="/axios_test" element={<AxiosTest/>}/>
+        <Route path="/axios_test" element={<AxiosTest />} />
+        <Route path="/display_flex" element={<DisplayFlex/>} />
       </Routes>
     </div>
   );
