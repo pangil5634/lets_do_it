@@ -1,0 +1,27 @@
+[
+    {
+        "date": "2024-01-01",
+        "title": "1차 세미나",
+        "category": 0,
+        "place": "에벤에셀",
+        "desc" : ""
+    }, {
+        "date": "2024-01-08",
+        "title": "2차 세미나",
+        "category": 0,
+        "place": "에벤에셀",
+        "desc" : ""
+    }, {
+        "date": "2024-01-15",
+        "title": "웹파트 1차 과제 마감",
+        "category": 1,
+        "place": "",
+        "desc" : "Component 이해"
+    }, {
+        "date": "2024-01-22",
+        "title": "3차 세미나",
+        "category": 0,
+        "place": "에벤에셀",
+        "desc" : ""
+    }
+]

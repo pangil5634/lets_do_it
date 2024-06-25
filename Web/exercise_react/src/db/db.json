@@ -1,0 +1,133 @@
+{
+  "schedule": [
+    {
+      "date": "2024-01-01",
+      "title": "1차 세미나",
+      "category": 0,
+      "place": "에벤에셀",
+      "desc": "",
+      "id": "4f38"
+    },
+    {
+      "date": "2024-01-08",
+      "title": "2차 세미나",
+      "category": 0,
+      "place": "에벤에셀",
+      "desc": "",
+      "id": "a58d"
+    },
+    {
+      "date": "2024-01-15",
+      "title": "웹파트 1차 과제 마감",
+      "category": 1,
+      "place": "",
+      "desc": "Component 이해",
+      "id": "c06a"
+    },
+    {
+      "date": "2024-01-22",
+      "title": "3차 세미나",
+      "category": 0,
+      "place": "에벤에셀",
+      "desc": "",
+      "id": "70bf"
+    }
+  ],
+  "users": [
+    {
+      "uid": "u1",
+      "pid": "p1",
+      "name": "김광일",
+      "userType": 0,
+      "phone": "010-5634-6683",
+      "email": "oksk6689@gmail.com",
+      "part": "웹",
+      "id": "5ad7"
+    },
+    {
+      "uid": "u2",
+      "pid": "p2",
+      "name": "김채린",
+      "userType": 1,
+      "phone": "010-1234-1234",
+      "email": "user2@gmail.com",
+      "part": "서버",
+      "id": "a84e"
+    },
+    {
+      "uid": "u3",
+      "pid": "p3",
+      "name": "조세희",
+      "userType": 0,
+      "phone": "010-1111-1111",
+      "email": "user3@gmail.com",
+      "part": "운영",
+      "id": "55c7"
+    },
+    {
+      "id": "6b3f",
+      "uid": "",
+      "pid": "",
+      "name": "김하람",
+      "userType": 0,
+      "email": "user4@gmail.com",
+      "phone": "010-1111-2222",
+      "part": "iOS"
+    }
+  ],
+  "scores": [
+    {
+      "uid": "u1",
+      "pid": "p1",
+      "plus": [
+        {
+          "point": 5,
+          "desc": "1차 세미나 MVP"
+        },
+        {
+          "point": 3,
+          "desc": "디스콰이엇 작성"
+        }
+      ],
+      "minus": [
+        {
+          "point": 1,
+          "desc": "1차 세미나 지각"
+        }
+      ],
+      "total": 0,
+      "id": "be4d"
+    },
+    {
+      "uid": "u2",
+      "pid": "p2",
+      "plus": [
+        {
+          "point": 3,
+          "desc": "디스콰이엇 작성"
+        }
+      ],
+      "minus": [
+        {
+          "point": 2,
+          "desc": "1차 세미나 결석"
+        }
+      ],
+      "total": 0,
+      "id": "1509"
+    },
+    {
+      "uid": "u1",
+      "pid": "p1",
+      "plus": [],
+      "minus": [
+        {
+          "point": 1,
+          "desc": "1차 과제 지각"
+        }
+      ],
+      "total": 0,
+      "id": "2039"
+    }
+  ]
+}

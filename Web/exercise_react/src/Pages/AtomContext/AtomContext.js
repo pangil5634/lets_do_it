@@ -1,6 +1,5 @@
 import {useRecoilState} from "recoil";
 import {userInfo} from "../../Atom";
-import {useResetRecoilState} from "recoil";
 import {useState} from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";

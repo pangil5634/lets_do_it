@@ -1,0 +1,49 @@
+[
+    {
+        "uid": "u1",
+        "pid": "p1",
+        "plus": [
+            {
+                "point": 5,
+                "desc": "1차 세미나 MVP"
+            }, {
+                "point": 3,
+                "desc": "디스콰이엇 작성"
+            }
+        ],
+        "minus": [
+            {
+                "point": 1,
+                "desc": "1차 세미나 지각"
+            }
+        ],
+        "total": 0
+    }, {
+        "uid": "u2",
+        "pid": "p2",
+        "plus": [
+            {
+                "point": 3,
+                "desc": "디스콰이엇 작성"
+            }
+        ],
+        "minus": [
+            {
+                "point": 2,
+                "desc": "1차 세미나 결석"
+            }
+        ],
+        "total": 0
+    }, {
+        "uid": "u1",
+        "pid": "p1",
+        "plus": [],
+        "minus": [
+            {
+                "point": 1,
+                "desc": "1차 과제 지각"
+            }
+        ],
+        "total": 0
+    }
+]
