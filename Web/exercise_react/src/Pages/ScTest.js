@@ -79,7 +79,8 @@ function ScTest(){
 
     useEffect(() => {
         getData();
-    },[])
+    }, [])
+    
     return (
         <ScTestContainer>
             <ScTestWrapper>

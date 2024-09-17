@@ -8,6 +8,8 @@ import AxiosTest from './Pages/Axios/AxiosTest';
 import DisplayFlex from './Pages/Display/DisplayFlex';
 import CRA19capstoneFestivalPage from './Pages/CRA19capstoneFestivalPage';
 import ScTest from './Pages/ScTest';
+import FrontBackTest from './Pages/FrontBackTest';
+import Map from './Pages/Map';
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/cra" element={<CRA19capstoneFestivalPage />} />
             <Route path="/axios_test" element={<AxiosTest/>}/>
             <Route path="/sc_test" element={<ScTest/>}/>
+            <Route path="/front_back_test" element={<FrontBackTest/>}/>
+                <Route path="/map" element={<Map/>}/>
         </Routes>
         </div>
     );
