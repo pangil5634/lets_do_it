@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import './Notification.css';
+// import './Notification.css';
 
-function App() {
+function Notification() {
     const [inputValue, setInputValue] = useState('');
 
     // 알림 권한 요청 및 알림 생성
@@ -37,4 +37,4 @@ function App() {
     );
 }
 
-export default App;
+export default Notification;

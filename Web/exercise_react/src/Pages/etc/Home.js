@@ -16,6 +16,7 @@ function Home() {
             <MenuLink to="/sc_test">sc_test</MenuLink>
             <MenuLink to="/front_back_test">Front Back Test</MenuLink>
             <MenuLink to="/notification">Web Notification</MenuLink>
+            <MenuLink to="/css/psedo_element">Psedo_Element</MenuLink>
         </Container>
     );
 }

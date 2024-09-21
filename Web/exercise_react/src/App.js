@@ -11,6 +11,7 @@ import Map from "./Pages/etc/Map";
 import CRA19capstoneFestivalPage from "./Pages/etc/CRA19capstoneFestivalPage";
 import Notification from "./Pages/Notification/Notification"
 import NotFound from './Pages/etc/NotFound'; 
+import Psedo_Element from './Pages/CSS/Pseudo_Element/Psedo_Element';
 function App() {
     return (
         <div>
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/front_back_test" element={<FrontBackTest/>}/>
                 <Route path="/map" element={<Map />} />
                 <Route path="/notification" element={<Notification />} />
+                <Route path="/css/psedo_element" element={<Psedo_Element />} />
 
                 {/* wrong path */}
                 <Route path="*" element={<NotFound />} />
