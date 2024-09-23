@@ -17,6 +17,7 @@ function Home() {
             <MenuLink to="/front_back_test">Front Back Test</MenuLink>
             <MenuLink to="/notification">Web Notification</MenuLink>
             <MenuLink to="/css/psedo_element">Psedo_Element</MenuLink>
+            <MenuLink to="/spring_api_test">Spring API Test</MenuLink>
         </Container>
     );
 }

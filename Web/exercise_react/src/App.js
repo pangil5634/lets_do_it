@@ -12,6 +12,7 @@ import CRA19capstoneFestivalPage from "./Pages/etc/CRA19capstoneFestivalPage";
 import Notification from "./Pages/Notification/Notification"
 import NotFound from './Pages/etc/NotFound'; 
 import Psedo_Element from './Pages/CSS/Pseudo_Element/Psedo_Element';
+import SpringAPITest from './Pages/etc/SpringAPITest';
 function App() {
     return (
         <div>
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/map" element={<Map />} />
                 <Route path="/notification" element={<Notification />} />
                 <Route path="/css/psedo_element" element={<Psedo_Element />} />
+                <Route path="/spring_api_test" element={<SpringAPITest />} />
 
                 {/* wrong path */}
                 <Route path="*" element={<NotFound />} />
